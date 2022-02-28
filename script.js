@@ -1,4 +1,4 @@
-let dogs =[
+const dogs =[
     {name:"Pepper", id:23328,sex:"Female",age:"2Yrs 3Mths 1Wks",status:"Spayed/Neutered",breed:"American Pit Bull cross",pic:"http://kentoncountypets.shelterbuddy.com/photos/lostfound/71168_th_600.jpeg"},
     {name:"Hattie", id:23989,sex:"Female",age:"1Yrs 6Mths 2Wks",status:"Spayed/Neutered",breed:"American Pit Bull cross",pic:"http://kentoncountypets.shelterbuddy.com/photos/lostfound/71438_th_600.jpg"},
     {name:"Jimmy", id:24104,sex:"Male",age:"9Mths",status:"Spayed/Neutered",breed:"American Pit Bull cross",pic:"http://kentoncountypets.shelterbuddy.com/photos/lostfound/71509_th_600.jpeg"},
@@ -8,22 +8,24 @@ let dogs =[
 
 ]
 function dog(){
-    for (dog in dogs){
-        print("<div class=\"dog\">");
-        print("<img class=\"dogimg\"",dog.pic,">");
-        print("<h3 class=\"dogname\">",dog.name,"</h3>");
-        print("<p class=\"dogbreed\">Breed: ",dog.breed,"</p>");
-        print("<p class=\"dogid\">ID: ",dog.id,"</p>");
-        print("<p class=\"dogsex\">Sex: ",dog.sex,"</p>");
-        print("<p class=\"dogstatus\"Status>",dog.status,"</p>");
-        print("<p class=\"dogage\">Age: ",dog.age,"</p>");
-        print("</div>");
+
+    for (let i=0;i<6;i++){
+        document.write("<div class=\"dog\">");
+        document.write("<img class=\"dogimg\" src=\"",dogs[i].pic,"\">");
+        document.write("<h3 class=\"dogname\">",dogs[i].name,"</h3>");
+        document.write("<p class=\"dogbreed\">Breed: ",dogs[i].breed,"</p>");
+        document.write("<p class=\"dogid\">ID: ",dogs[i].id,"</p>");
+        document.write("<p class=\"dogsex\">Sex: ",dogs[i].sex,"</p>");
+        document.write("<p class=\"dogstatus\"Status>",dogs[i].status,"</p>");
+        document.write("<p class=\"dogage\">Age: ",dogs[i].age,"</p>");
+        document.write("</div>");
     }
 }
 function nextpage(){
     let i=1;
-    while(i<4){
-        print("<a class=\"page\"href=\"/?page=",i-1,"\">",i,"</a>");
+    while(i<5){
+        document.write("<a class=\"page\"href=\"?page=",i-1,"\">",i,"</a>");
+        i++;
     }
-    print("<a class=\"page\" href\","i-1,"\"\\>\\></a>");
+    document.write("<a class=\"page\"href=\"?page=",i-1,"\">\>\></a>");
 }
