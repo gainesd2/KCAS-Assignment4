@@ -1,36 +1,47 @@
-header{
+header {
     border-bottom: 2px solid rgb(185, 178, 178);
     border-left: 2px solid rgb(185, 178, 178);
     border-right: 2px solid rgb(185, 178, 178);
-    border-radius:2%;
+    border-radius: 2%;
     margin-bottom: 1%;
-    margin-top:0;
+    margin-top: 0;
     background-color: aliceblue;
     padding: 0;
 }
-h1{
-    margin:0;
-    padding:1%;
+
+h1 {
+    margin: 0;
+    padding: 1%;
 }
-.dog{
+
+.dog {
     width: 480px;
     text-align: center;
     margin: auto;
     padding: 0;
 }
-.dogimg{
+
+.dogImg {
     height: 400px;
 }
-main{
-    text-align:center;
-    margin-top:0;
+
+main {
+    text-align: center;
+    margin-top: 0;
     padding: 0;
 }
-body{
+
+body {
     text-align: center;
-    margin-top:0;
+    margin-top: 0;
     padding: 0px;
 }
-.dogs{
-    padding:0;
+
+.main-cardHolder {
+    padding: 0;
+}
+
+.main-cardSleeve {
+    text-decoration: none;
+    color: black;
 }
