@@ -14,7 +14,7 @@ h1 {
     padding: 1%;
 }
 
-.dog {
+.dogCard {
     width: 480px;
     text-align: center;
     margin: auto;
@@ -44,4 +44,12 @@ body {
 .main-cardSleeve {
     text-decoration: none;
     color: black;
+}
+
+.bg-male {
+    background-color: #96CBF3;
+}
+
+.bg-female {
+    background-color: #F296C6;
 }
