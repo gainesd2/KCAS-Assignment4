@@ -1,0 +1,48 @@
+header {
+    border-bottom: 2px solid rgb(185, 178, 178);
+    border-left: 2px solid rgb(185, 178, 178);
+    border-right: 2px solid rgb(185, 178, 178);
+    border-radius: 2%;
+    margin-bottom: 1%;
+    background-color: aliceblue;
+}
+
+h1 {
+    padding: 1%;
+}
+
+.dogCard {
+    width: 350px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+}
+
+.dogCard:hover {
+    border: 3px solid rgba(0, 0, 0, .125);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+}
+
+.body {
+    background-color: #fbf5ef;
+}
+
+.card img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-imgHolder {
+    display: inline-block;
+    height: 300px;
+}
+
+.bg-male {
+    background-color: #96CBF3;
+}
+
+.bg-female {
+    background-color: #F296C6;
+}
