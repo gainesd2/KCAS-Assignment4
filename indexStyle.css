@@ -46,3 +46,7 @@ h1 {
 .bg-female {
     background-color: #F296C6;
 }
+
+.paginationBTN:hover {
+    background-color: #e3edf6;
+}
