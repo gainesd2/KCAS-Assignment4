@@ -30,6 +30,17 @@
     <main class="d-flex align-self-center justify-content-center card mb-5">
         <div class="main-cardHolder container m-3 p-4 text-center">
             <!--Selection Menu-->
+            <div class="border border-2 p-4">
+                <div class="d-flex flex-row">
+                    <label class="fs-5 text-start" for="numSelector">Pets Displayed:</span>
+                    <select name="numSelector" id="numSelector" class="form-select w-auto ms-3">
+                        <option value="6" selected>6</option>
+                        <option value="9">9</option>
+                        <option value="12">12</option>
+                        <option value="24">24</option>
+                    </select>
+                </div>
+            </div>
             <!--dogdeck-->
             <div class="d-flex flex-wrap  justify-content-evenly" id="dogDeck">
 
@@ -37,6 +48,7 @@
         </div>
         <div class="btn-group bg-light m-4 d-block" id="paginator"></div>
         <script>
+            nextPage(numSelector);
             dog();
         </script>
     </main>
