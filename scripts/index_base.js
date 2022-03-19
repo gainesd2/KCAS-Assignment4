@@ -4,9 +4,9 @@
  * clears the deck, generates a template if needed, and fills the deck with cards
  * @param {int} currentPage current page number
  */
-function dog() {
+function animal() {
     // clear the deck
-    dogDeck.innerHTML = "";
+    animalDeck.innerHTML = "";
 
     // create card parts array
     const CARDPARTS = {
@@ -21,17 +21,17 @@ function dog() {
     }
 
     // declare and designate the template
-    let dogTemplate;
+    let animalTemplate;
 
     // if it doesn't exist, make it, otherwise use the existing template
-    if (document.querySelector("#dogCardTemplate") == null) {
-        dogTemplate = cardTemplater("dog", CARDPARTS, ".main-cardHolder");
+    if (document.querySelector("#animalCardTemplate") == null) {
+        animalTemplate = cardTemplater("animal", CARDPARTS, ".main-cardHolder");
     } else {
-        dogTemplate = document.querySelector("#dogCardTemplate");
+        animalTemplate = document.querySelector("#animalCardTemplate");
     }
 
     // use the template to make the needed cards
-    cardLoader("dog", dogTemplate, dogDeck, dogs);
+    cardLoader("animal", animalTemplate, animalDeck, animals);
 }
 
 /**
@@ -187,7 +187,7 @@ function cardLoader(baseName, cardTemplate, dest, data) {
         }
 
         // create the link for the detail page
-        newCard.href = `./detail.html?id=?${i}`;
+        newCard.href = `./detail.html?id=${i}`;
 
         // format the card
         cardFormatter(newCard, dest, "card m-3 text-dark text-decoration-none")

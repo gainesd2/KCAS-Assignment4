@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script src="./scripts/getAllURLParams.js"></script>
+    <script>
+        let urlParams = getAllUrlParams();
+        if (!(urlParams.id)) {
+            window.location.href = "index.html";
+        }
+    </script>
+
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!--Bootstrap JS/Popper Bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="./assets/animalData.js"></script>
+    <script src="./scripts/detailScript.js"></script>
+    <script src="./scripts/getAllURLParams.js"></script>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+
+<!--Link to future header: https://www.kentoncounty.org/ImageRepository/Document?documentID=45-->
+
+<body class="d-flex flex-column p-0 mt-0 body">
+    <header class="mt-0 p-0 sticky-top text-center">
+        <h1 class="m-0">
+            <a href="index.html" class="link-dark text-decoration-none">
+                Kenton County Animal Shelter</h1>
+            </a>
+    </header>
+    <main class="d-flex align-self-center justify-content-center p-5 card mx-5 my-3">
+        <h1 id="Name" class="mt-4 mb-0">About </h1>
+        <hr class="mt-0">
+        <div class="d-flex flex-column flex-lg-row justify-content-between">
+            <!--left side on big screens, bottom on small screens-->
+            <div class="mx-4 mb-4 order-2 order-lg-1 ">
+                <table class="mb-3">
+                    <tr>
+                        <th>Type:</th>
+                        <td id="type"></td>
+                    </tr>
+                    <tr>
+                        <th>Breed:</th>
+                        <td id="Breed"></td>
+                    </tr>
+                    <tr>
+                        <th>Second Breed:</th>
+                        <td id="secondBreed"></td>
+                    </tr>
+                    <tr>
+                        <th>Sex:</th>
+                        <td id="Sex"></td>
+                    </tr>
+                    <tr>
+                        <th>Color:</th>
+                        <td id="color"></td>
+                    </tr>
+                    <tr>
+                        <th>Spayed/Neutered:</th>
+                        <td id="Status"></td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td id="Age"></td>
+                    </tr>
+                    <tr id="declawedOrSize">
+                        <th></th>
+                        <td></td>
+                    </tr>
+                </table>
+                <ul id="stats" class="list-unstyled">
+                </ul>
+
+                <div id="animalIdentification">
+                    Animal ID: <strong id="ID"></strong><br>
+                    <strong>
+                        Please Take note of the Animal ID before contacting us
+                    </strong><br>
+                </div>
+
+                <ul id="SuitabilityGuide">
+                </ul>
+            </div>
+            <!--right side on big screens, top on small screens-->
+            <img class="order-1 order-lg-2 mx-4" id="imgHolder" alt="">
+        </div>
+
+        <div id="descHolder" class="mx-4">
+            <h4>A Little Bit About Me</h4>
+            <p id="desc"></p>
+        </div>
+
+        <div id="locationHolder" class="mx-4">
+            <h4>Where can you find me</h4>
+            <p id="contactor" class="mb-0"></p>
+            You can contact me by:
+            <p class="mb-0"><strong>Phone: </strong>(859) 356-7400</p>
+            <p><strong>Address:</strong><br>1020 Mary Laidley <br>Ft Mitchell, KY 41017</p>
+
+            <p>We unfortunately can not put animals on HOLD over the phone</p>
+            <p>Dear Customer, please understand to prevent disappointment, this website is live and updates frequently, there is chance that when you would arrive at our location the animal you have an interest in might have been adopted or another party
+                might be going through the adoption process at that present time</p>
+        </div>
+    </main>
+</body>
+<script>
+    detailLauncher(urlParams.id);
+</script>
+
+</html>

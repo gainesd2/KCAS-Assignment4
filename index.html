@@ -16,9 +16,10 @@
     <!--Bootstrap JS/Popper Bundle-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <script src="./assets/dogData.js"></script>
+    <script src="./assets/animalData.js"></script>
     <script src="./scripts/index_base.js"></script>
-    <link rel="stylesheet" href="indexStyle.css">
+    <link rel="stylesheet" href="./css/indexStyle.css">
+    <link rel="stylesheet" href="./css/shared.css">
 </head>
 
 <!--Link to future header: https://www.kentoncounty.org/ImageRepository/Document?documentID=45-->
@@ -33,14 +34,13 @@
     </header>
     <main class="d-flex align-self-center justify-content-center card mb-5">
         <div class="main-cardHolder container m-3 p-4 text-center">
-            <!--dogdeck-->
-            <div class="d-flex flex-wrap  justify-content-evenly" id="dogDeck">
+            <!--animaldeck-->
+            <div class="d-flex flex-wrap  justify-content-evenly" id="animalDeck">
 
             </div>
         </div>
-        <div class="btn-group bg-light m-4 d-block" id="paginator"></div>
         <script>
-            dog();
+            animal();
         </script>
     </main>
 </body>

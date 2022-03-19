@@ -1,0 +1,24 @@
+header {
+    border-bottom: 2px solid rgb(185, 178, 178);
+    border-left: 2px solid rgb(185, 178, 178);
+    border-right: 2px solid rgb(185, 178, 178);
+    border-radius: 2%;
+    margin-bottom: 1%;
+    background-color: aliceblue;
+}
+
+h1 {
+    padding: 1%;
+}
+
+.body {
+    background-color: #fbf5ef;
+}
+
+.bg-male {
+    background-color: #96CBF3;
+}
+
+.bg-female {
+    background-color: #F296C6;
+}

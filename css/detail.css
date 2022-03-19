@@ -1,0 +1,8 @@
+#imgHolder {
+    max-height: 500px;
+    width: fit-content;
+}
+
+td {
+    padding-left: 1rem;
+}
