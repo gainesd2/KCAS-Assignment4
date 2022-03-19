@@ -2,9 +2,9 @@
  * clears the deck, generates a template if needed, and fills the deck with cards
  * @param {int} currentPage current page number
  */
-function dog(currentPage = 1) {
+function animal(currentPage = 1) {
     // clear the deck
-    dogDeck.innerHTML = "";
+    animalDeck.innerHTML = "";
 
     // create card parts array
     const CARDPARTS = {
@@ -19,17 +19,17 @@ function dog(currentPage = 1) {
     }
 
     // declare and designate the template
-    let dogTemplate;
+    let animalTemplate;
 
     // if it doesn't exist, make it, otherwise use the existing template
-    if (document.querySelector("#dogCardTemplate") == null) {
-        dogTemplate = cardTemplater("dog", CARDPARTS, ".main-cardHolder");
+    if (document.querySelector("#animalCardTemplate") == null) {
+        animalTemplate = cardTemplater("animal", CARDPARTS, ".main-cardHolder");
     } else {
-        dogTemplate = document.querySelector("#dogCardTemplate");
+        animalTemplate = document.querySelector("#animalCardTemplate");
     }
 
     // use the template to make the needed cards
-    cardLoader("dog", dogTemplate, dogDeck, dogs, currentPage - 1, parseInt(numSelector.value));
+    cardLoader("animal", animalTemplate, animalDeck, animals, currentPage - 1, parseInt(numSelector.value));
 }
 
 /**
@@ -80,7 +80,7 @@ function cardLoader(baseName, cardTemplate, dest, data, current, cardsPerPage) {
         }
 
         // create the link for the detail page
-        newCard.href = `./detail.html?id=?${i}`;
+        newCard.href = `./detail.html?id=${i}`;
 
         // format the card
         cardFormatter(newCard, dest, "card m-3 text-dark text-decoration-none")
@@ -97,14 +97,14 @@ function nextPage(numSelector) {
     // when a new numberPerPage is selected
     numSelector.addEventListener("change", (e) => {
         // reload cards
-        dog(document.querySelector("#paginator").value);
+        animal(document.querySelector("#paginator").value);
 
         // reload pagination
-        paginator(numSelector.value, dogs, "#paginator");
+        paginator(numSelector.value, animals, "#paginator");
     });
 
     // run paginator on first run
-    paginator(numSelector.value, dogs, "#paginator");
+    paginator(numSelector.value, animals, "#paginator");
 }
 
 /**
@@ -139,7 +139,7 @@ function paginator(cardsPerPage, data, destString) {
 
     // when a new page is selected
     dest.addEventListener("change", function(e) {
-        dog(e.target.value);
+        animal(e.target.value);
     });
 
     return i;

@@ -1,10 +1,10 @@
-// keeps track of the current dog, and which dog is to be loaded next
-let dogCounter = 0;
+// keeps track of the current animal, and which animal is to be loaded next
+let animalCounter = 0;
 
 /**
  * Generates a template if needed, appends 2 cards every iterations
  */
-function dog() {
+function animal() {
     // create card parts array
     const CARDPARTS = {
         Card: document.createElement("a"),
@@ -18,17 +18,17 @@ function dog() {
     }
 
     // declare and designate the template
-    let dogTemplate;
+    let animalTemplate;
 
     // if it doesn't exist, make it, otherwise use the existing template
-    if (document.querySelector("#dogCardTemplate") == null) {
-        dogTemplate = cardTemplater("dog", CARDPARTS, ".main-cardHolder");
+    if (document.querySelector("#animalCardTemplate") == null) {
+        animalTemplate = cardTemplater("animal", CARDPARTS, ".main-cardHolder");
     } else {
-        dogTemplate = document.querySelector("#dogCardTemplate");
+        animalTemplate = document.querySelector("#animalCardTemplate");
     }
 
     // use the template to make the needed cards
-    return cardLoader("dog", dogTemplate, dogDeck, dogs, 2);
+    return cardLoader("animal", animalTemplate, animalDeck, animals, 2);
 }
 
 /**
@@ -40,10 +40,10 @@ function dog() {
  * @returns {string} string representing the ID of the template card
  */
 function cardLoader(baseName, cardTemplate, dest, data, perPage) {
-    let endMan = dogCounter + perPage;
-    for (; dogCounter < data.length && dogCounter < endMan; dogCounter++) {
+    let endMan = animalCounter + perPage;
+    for (; animalCounter < data.length && animalCounter < endMan; animalCounter++) {
         //retrieve current entru
-        let entry = data[dogCounter];
+        let entry = data[animalCounter];
 
         // clone hidden node template
         let newCard = cardTemplate.cloneNode(true);
@@ -80,7 +80,7 @@ function cardLoader(baseName, cardTemplate, dest, data, perPage) {
         }
 
         // create the link for the detail page
-        newCard.href = `./detail.html?id=?${dogCounter}`;
+        newCard.href = `./detail.html?id=${animalCounter}`;
 
         // format the card
         cardFormatter(newCard, dest, "card m-3 text-dark text-decoration-none")
@@ -88,8 +88,8 @@ function cardLoader(baseName, cardTemplate, dest, data, perPage) {
         newCard.hidden = false;
     }
 
-    if (dogCounter >= data.length) return -1;
-    else return dogCounter;
+    if (animalCounter >= data.length) return -1;
+    else return animalCounter;
 }
 
 /**
